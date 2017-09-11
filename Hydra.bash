@@ -1,5 +1,5 @@
 #!/bin/bash
-# Control Scheme ./Encode.bash [Music Directory] [Output Directory] [Bitrate in kbs] [Number of Workers 1-35]
+# Control Scheme ./Hydra.bash [Music Directory] [Output Directory] [Bitrate in kbs] [Number of Workers 1-35]
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 nun=""
 if [ ! -d "$2" ]; then
@@ -53,7 +53,7 @@ fi
 for i in $(seq 1 $4); do
 	temp=iter$i
 	#echo ${!temp}
-	"${DIR}/EncodeWorker.bash" "$1" "$2" "$3" "${!temp}" &
+	"${DIR}/Head.bash" "$1" "$2" "$3" "${!temp}" &
 done
 j=$(jobs -p)
 trap 'kill $j' SIGINT

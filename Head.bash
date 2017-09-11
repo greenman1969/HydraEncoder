@@ -1,5 +1,5 @@
 #!/bin/bash
-# Worker Script Call Layout: ./EncodeWorker.bash [Music Directory] [Output Directory] [Bitrate in kbs] [Iteration Area eg. [A..G]]
+# Worker Script Call Layout: ./Head.bash [Music Directory] [Output Directory] [Bitrate in kbs] [Iteration Area eg. [A..G]]
 #echo $1 $2 $3 $4
 l="$1/$4*/*/*"
 for i in "$1/$4*/*/*"; do
