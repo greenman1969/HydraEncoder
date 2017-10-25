@@ -2,7 +2,7 @@
 # Worker Script Call Layout: ./Head.bash [Music Directory] [Output Directory] [Bitrate in kbs] [Iteration Area eg. [A..G]]
 #echo $1 $2 $3 $4
 l="$1/$4*/*/*"
-echo $l
+#echo $l
 for i in $1/$4*/*/*; do
 	if [ ! -e "$i" ] ; then
 		exit 0
