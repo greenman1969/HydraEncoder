@@ -1,5 +1,5 @@
 #!/bin/bash
-# Control Scheme ./Hydra.bash [Music Directory] [Output Directory] [Bitrate in kbs] [Number of Workers 1-35]
+# Control Scheme ./Hydra.bash [Music Directory: Omit Trailing /] [Output Directory: Omit Trailing /] [Bitrate in kbs] [Number of Workers: 1-8,12]
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 nun="$(find "$1" -type f -regex .+\.m.+ -printf '%p\n')"
 echo "$nun" >> "$DIR/toEncode.d"
