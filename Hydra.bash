@@ -56,7 +56,7 @@ for i in $(seq 1 $4); do
 #	echo $i
 	temp=${iter[i]}
 	echo $temp
-	./Head.bash "$1" "$2" "$3" "${temp}" &
+#	$DIR/Head.bash "$1" "$2" "$3" "${temp}" &
 done
 j=$(jobs -p)
 trap 'kill $j' SIGINT

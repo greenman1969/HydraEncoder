@@ -1,10 +1,8 @@
 #!/bin/bash
 # Worker Script Call Layout: ./Head.bash [Music Directory: Omit trailing /] [Output Directory: omit trailing /] [Bitrate in kbs] [File listing files]
 #echo $1 $2 $3 $4
-
-l="$1/$4*/*/*"
-#echo $l
-nun="$(cat $4)"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+nun="$(cat $DIR/$4)"
 IFS=$'\n'
 #echo "$nun"
 for i in $nun; do
