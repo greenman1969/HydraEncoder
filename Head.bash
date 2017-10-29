@@ -19,7 +19,7 @@ for i in $nun; do
 	if [ ! -d "$2/$i3" ]; then
 		mkdir -p "$2/$i3"
 	fi
-	echo "../$1/${i%.*}.mp3"
-#	ffmpeg -i "$i" -ab $3k "$2/$i4"
-#	replaygain -r 95 "$2/$i4"
+#	echo "../$1/${i%.*}.mp3"
+	ffmpeg -i "$i" -ab $3k "$2/$i4"
+	replaygain -r 95 "$2/$i4"
 done
