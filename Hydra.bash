@@ -3,7 +3,7 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 nun="$(find "$1" -type f -regex .+\.m.+ -printf '%p\n')"
 echo "$nun" >> "$DIR/toEncode.d"
-split "$DIR/toEncode.d" -n l/$4
+$(cd $DIR $$ split "$DIR/toEncode.d" -n l/$4)
 if [ ! -d "$2" ]; then
 	mkdir "$2"
 fi
@@ -104,4 +104,4 @@ done
 j=$(jobs -p)
 trap 'kill $j' SIGINT
 wait
-rm toEncode.d xa*
+rm $DIR/toEncode.d $DIR/xa*
